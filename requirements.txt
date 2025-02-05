@@ -1,11 +1,6 @@
-<<<<<<< HEAD
+Flask
 openai
-Flask
 python-dotenv
-=======
-Flask
 azure-core
 azure-search-documents
-openai
->>>>>>> ef2cafa (second commit to app)
 gunicorn
