@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Open AI Flask</title>
 </head>
 <body>
@@ -19,3 +20,58 @@
     {% endif %}
 </body>
 </html>
+=======
+    <title>AI Search & Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .response-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">AI Search & Chat</h2>
+        
+        <form method="POST" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="query" class="form-control" placeholder="Enter your query..." required>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+
+        {% if results %}
+            <h4>Search Results:</h4>
+            <ul class="list-group">
+                {% for result in results %}
+                    <li class="list-group-item">
+                        <strong>{{ result.title }}</strong><br>
+                        {{ result.text[:250] }}...
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if response %}
+            <div class="response-box">
+                <h4>GPT Response:</h4>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+>>>>>>> ef2cafa (second commit to app)
